@@ -1,43 +1,48 @@
 <?php
-    function hitungKembalian($totalbelanja,$uangdiberikan){
-        $diskon = 0;
-        if ($totalbelanja >= 2000000&& $totalbelanja (500000)){
-            $diskon = 0.5;
-        } else if ($totalbelanja >= 5000000&& $totalbelanja < 1000000){
-            $diskon = 0.20;
-        }
-        $totalsetelahdiskon = $totalbelanja (1 - $diskon);
-        $kembalian = $uangdiberikan - $totalsetelahdiskon;
-        if ($kembalian >= 0){
-            return $kembalian;
-        } else {
-            return 0;
-        }
-    }
-    $totalbelanja = 8000000;
-    $uangdiberikan = 10000000;
-    echo "uang yang diterima oleh Andi adalah Rp" . hitungKembalian($totalbelanja,$uangdiberikan);
-?>
+// Error reporting untuk debugging
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
-<?php
-    function hitungKupon($totalharga){
-        if ($totalharga >= 10000000){
-            $diskon = 0.2;
-            $kupon = 12;
-        } else if ($totalharga >= 5000000){
-            $diskon = 0.1;
-            $kupon = 10;
-        } else if ($totalharga >= 20000000){
-            $diskon = 0.05;
-            $kupon = 7;
-        } else {
-            $diskon = 0;
-            $kupon = 5;
-        }
-        $totaldiskon = $totalharga * $diskon;
-        $uangdapat = $kupon * 100;
-        return $uangdapat;
-    }
-    //contoh penggunaan fungsi
-    echo "Andi akan mendapatkan uang Rp" . $uangdapat . "dari kupon-kupon yang diterima setelah pembelian.";
+// Inisialisasi variabel
+$base_url = "https://example.com";
+$title = "Situs Contoh";
+$charset = "UTF-8";
+
+// CSS styling
+echo '<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #333;
+}
+</style>';
+
+// HTML output
+echo '<!DOCTYPE html>';
+echo '<html lang="id">';
+echo '<head>';
+echo '<meta charset="' . $charset . '">';
+echo '<title>' . $title . '</title>';
+echo '</head>';
+echo '<body>';
+echo '<div class="container">';
+echo '<h1>Selamat Datang di ' . $title . '</h1>';
+echo '<p>Ini adalah halaman contoh yang dibuat dari kode yang diperbaiki.</p>';
+echo '</div>';
+echo '</body>';
+echo '</html>';
 ?>
